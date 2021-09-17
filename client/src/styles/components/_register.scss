@@ -1,0 +1,110 @@
+.register {
+    height: calc(100vh - 7rem);
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.3),
+        rgba(255, 255, 255, 0.3)
+    ),
+     url('https://images.unsplash.com/photo-1593062096033-9a26b09da705?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGVza3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.register__header {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+}
+
+.register__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem 3rem .3rem 3rem;
+}
+
+.register__form div {
+    margin-bottom: 1rem;
+    padding-bottom: 3rem;
+    position: relative;
+
+    label {
+        display: inline-block;
+        margin-bottom: .5rem;
+    }
+
+    input {
+        display: block;
+        font-family: inherit;
+        font-size: inherit;
+        padding: .6rem .4rem;
+        border: .2rem solid #f0f0f0;
+        border-radius: .4rem;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    i {
+        position: absolute;
+        top: 3.2rem;
+        right: 0.5rem;
+        visibility: hidden;
+    }
+
+    small {
+        font-weight: bold;
+        position: absolute;
+        visibility: hidden;
+    }
+}
+
+.register__form__btn {
+    width: 100%;
+    border-radius: .5rem;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 1rem;
+    background-color: teal;
+    color: white;
+    cursor: pointer;
+}
+
+.register__form__input.error {
+
+    input {
+        border: 1px solid rgb(187, 14, 14);;
+    }
+
+    i.fa-exclamation-circle {
+        visibility: visible;
+        color: rgb(187, 14, 14);;
+    }
+
+    small {
+        visibility: visible;
+        color: rgb(187, 14, 14);;
+    }
+}
+
+.register__form__input.success {
+
+    input {
+        border: .1rem solid green;
+    }
+
+    i.fa-check-circle {
+        visibility: visible;
+        color: green;
+    }
+}
+
+.register__error {
+    font-size: 1.4rem;
+    color: rgb(187, 14, 14);
+    font-weight: bold;
+}

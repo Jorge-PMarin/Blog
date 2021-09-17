@@ -1,0 +1,32 @@
+.header {
+    background-image: url('../../images/hero.jpg');
+    height: 65vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
+.header__content {
+    max-width: 80%;
+    text-align: center;
+}
+
+.header__content__title {
+    font-size: 6.5rem;
+}
+
+.header__content__para {
+    font-size: 2rem;
+}
+
+.header__content__btn {
+    font-size: 1.8rem;
+    background-color:#fff;
+    padding: 1.2rem;
+    border-radius: 2.2rem;
+    border: .1rem solid rgb(0, 0, 0);
+    margin-top: 4rem;
+}

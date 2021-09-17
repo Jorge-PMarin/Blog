@@ -1,0 +1,77 @@
+.settings {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    font-size: 2rem;
+}
+
+.settings__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.settings__top__title {
+    font-size: 4rem;
+}
+
+.settings__top__deleteOption {
+    color: rgb(104, 103, 103);
+    cursor: pointer;
+}
+
+.settings__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.settings__form__picWrapper {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.settings__form__picWrapper__pic {
+    width: 16rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.settings__form__picWrapper__fileInput {
+    display: none;
+}
+
+.settings__form__picWrapper__icon {
+    font-size: 1.5rem;
+    border: .1rem solid black;
+    border-radius: 2rem;
+    padding: .5rem;
+    cursor: pointer;
+    margin-left: .5rem;
+}
+
+.settings__form__input {
+    padding: 1rem .5rem;
+    border: none;
+    border-bottom: .1rem solid black;
+    margin-bottom: 2rem;
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+.settings__form__btn {
+    width: 8rem;
+    padding: 0.7rem;
+    border-radius: 0.7rem;
+    border: none;
+    margin-top: 1rem;
+    background-color: teal;
+    color: #fff;
+    align-self: center;
+    cursor: pointer;
+}
