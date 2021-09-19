@@ -76,13 +76,11 @@ export default function NavBar() {
               )}
             </Link>
           ) : (
-            <button
-              type="button"
-              onClick={() => setIsOpen(true)}
-              className="navbar__right__btn"
-            >
-              Get started
-            </button>
+            <Link to="/register">
+              <button type="button" className="navbar__right__btn">
+                Get started
+              </button>
+            </Link>
           )}
         </div>
       </header>

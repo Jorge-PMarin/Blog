@@ -25,6 +25,7 @@ export default function SinglePost() {
         setTitle(res.data.title);
         setBody(res.data.body);
         setPostPic(res.data.picture);
+        console.log(res.data.authorId);
       } catch (err) {
         console.log(err);
       }
@@ -60,6 +61,7 @@ export default function SinglePost() {
           body,
         },
       });
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -97,9 +99,9 @@ export default function SinglePost() {
               </div>
             )}
             <div className="div singlePost__info__author__about">
-              <Link to={`/?user=${post.authorName}`} className="link">
+              <Link to={`/?user=${post.authorId?.name}`} className="link">
                 <p className="singlePost__info__author__about__name">
-                  {post.authorName}
+                  {post.authorId?.name}
                 </p>
               </Link>
               <button
@@ -110,7 +112,7 @@ export default function SinglePost() {
               </button>
             </div>
           </div>
-          {post.authorName === user.user?.name && (
+          {post.authorId?.name === user.user?.name && (
             <div className="singlePost__info__edit">
               <i
                 onClick={() => setUpdateMode(true)}
