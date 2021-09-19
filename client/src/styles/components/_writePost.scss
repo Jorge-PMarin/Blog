@@ -1,51 +1,50 @@
 .writePost {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .writePost__img {
-    width: 70vw;
-    height: 40vh;
-    object-fit: cover;
-    border-radius: .8rem;
-    margin-top: 4rem;
+  width: 70vw;
+  height: 40vh;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-top: 4rem;
 }
 
 .writePost__form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .writePost__form__group {
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .writePost__form__group__icon {
-    font-size: 2.5rem;
-    border: .1rem solid black;
-    border-radius: 2rem;
-    padding: .2rem;
-    margin-right: .5rem;
-    cursor: pointer;
+  font-size: 2.5rem;
+  border: 0.1rem solid black;
+  border-radius: 2rem;
+  padding: 0.2rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
 }
 
 .writePost__form__group__fileInput {
-    display: none;
+  display: none;
 }
 
 .writePost__form__group__titleInput,
 .writePost__form__group__bodyInput {
-    padding: 1rem;
-    width: 70vw;
-    border: none;
+  padding: 1rem;
+  width: 70vw;
+  border: none;
 
-    &:focus {
-        outline: none;
-    }
-
+  &:focus {
+    outline: none;
+  }
 }
 
 .writePost__form__group__titleInput {
@@ -53,16 +52,16 @@
 }
 
 .writePost__form__group__bodyInput {
-    height: 70vh;
-    font-size: 2rem;
+  height: 70vh;
+  font-size: 2rem;
 }
 
 .writePost__form__btn {
-    background-color: teal;
-    color: #fff;
-    border: none;
-    padding: 1rem 1.5rem;
-    border-radius: 1rem;
-    margin: 2rem 0;
-    cursor: pointer;
+  background-color: teal;
+  color: #fff;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  margin: 2rem 0;
+  cursor: pointer;
 }

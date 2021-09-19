@@ -3,23 +3,22 @@ $light-gray: #989898;
 $gray: #303030;
 $dark-gray: #181818;
 
-
 .link {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    font-family: 'PT Sans', sans-serif;
+  font-size: 62.5%;
+  font-family: 'PT Sans', sans-serif;
 }
 
 body {
-    font-size: 1.6rem;
+  font-size: 1.6rem;
 }

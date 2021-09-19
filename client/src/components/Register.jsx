@@ -1,10 +1,7 @@
 import React, { useRef, useState, useContext } from 'react';
 import { UserContext } from '../context/userContext';
 import { LoginSuccess } from '../context/userActions';
-
-const axios = require('axios');
-
-const API = process.env.BASE_URL;
+import { axiosInstance } from '../config';
 
 export default function Register() {
   const [error, setError] = useState(null);
@@ -40,14 +37,20 @@ export default function Register() {
     }
 
     function isEmail(value) {
-      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value);
+      return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+        value
+      );
     }
 
     // check name
     if (nameValue === '') {
       return setNewError(name.current, 'Name cannot be blank');
-    } if (nameValue.length < 3) {
-      return setNewError(name.current, 'Name must be at least 3 characters long');
+    }
+    if (nameValue.length < 3) {
+      return setNewError(
+        name.current,
+        'Name must be at least 3 characters long'
+      );
     }
     name.current.parentElement.className = 'register__form__input success';
 
@@ -59,8 +62,12 @@ export default function Register() {
 
     // check password
     if (passValue.length < 8) {
-      return setNewError(pass.current, 'Password must be at least 8 characters long.');
-    } if (passValue !== confirmPassValue) {
+      return setNewError(
+        pass.current,
+        'Password must be at least 8 characters long.'
+      );
+    }
+    if (passValue !== confirmPassValue) {
       setSuccess(pass.current);
       return setNewError(confirmPass.current, 'Passwords do not match');
     }
@@ -68,7 +75,7 @@ export default function Register() {
     setSuccess(confirmPass.current);
 
     try {
-      const res = await axios.post(`${API}/users`, {
+      const res = await axiosInstance.post(`/users`, {
         name: nameValue,
         email: emailValue,
         password: passValue,
@@ -138,7 +145,9 @@ export default function Register() {
           <i className="fas fa-check-circle" />
           <small>Error message</small>
         </div>
-        <button type="submit" className="register__form__btn">Sign up</button>
+        <button type="submit" className="register__form__btn">
+          Sign up
+        </button>
       </form>
       {error && <small className="register__error">{error}</small>}
     </div>

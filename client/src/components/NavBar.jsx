@@ -5,10 +5,7 @@ import defaultUserPic from '../images/user.png';
 import LoginModal from './LoginModal';
 import { UserContext } from '../context/userContext';
 import { Logout } from '../context/userActions';
-
-const axios = require('axios');
-
-const API = process.env.BASE_URL;
+import { axiosInstance } from '../config';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +13,9 @@ export default function NavBar() {
 
   async function logout() {
     try {
-      await axios({
+      await axiosInstance({
         method: 'post',
-        url: `${API}/users/logout`,
+        url: `/users/logout`,
         headers: {
           Authorization: user.user.token,
         },
@@ -38,40 +35,55 @@ export default function NavBar() {
           <img src={logo} alt="logo" className="navbar__left__logo" />
         </div>
         <ul className="navbar__middle">
-          <li><Link to="/" className="link">Home</Link></li>
-          <li><Link to="/" className="link">About</Link></li>
-          <li><Link to="/write" className="link">Write</Link></li>
-          {
-                        user.user ? (
-                          <li onClick={logout}>Logout</li>
-                        ) : (
-                          <li onClick={() => setIsOpen(true)}>Sign In</li>
-                        )
-                    }
+          <li>
+            <Link to="/" className="link">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/" className="link">
+              About
+            </Link>
+          </li>
+          <li>
+            <Link to="/write" className="link">
+              Write
+            </Link>
+          </li>
+          {user.user ? (
+            <li onClick={logout}>Logout</li>
+          ) : (
+            <li onClick={() => setIsOpen(true)}>Sign In</li>
+          )}
         </ul>
         <div className="navbar__right">
-          {
-                        user.user ? (
-                          <Link to="/settings">
-                            {user.user.avatar ? (
-                              <img
-                                src={`data:image/*;base64,${user.user.avatar.toString('base64')}`}
-                                alt="Profile pic"
-                                className="navbar__right__pic"
-                              />
-                            ) : (
-                              <img
-                                src={defaultUserPic}
-                                alt="Profile pic"
-                                className="navbar__right__pic"
-                              />
-                            )}
-                          </Link>
-                        ) : (
-                          <button type="button" onClick={() => setIsOpen(true)} className="navbar__right__btn">Get started</button>
-                        )
-                    }
-
+          {user.user ? (
+            <Link to="/settings">
+              {user.user.avatar ? (
+                <img
+                  src={`data:image/*;base64,${user.user.avatar.toString(
+                    'base64'
+                  )}`}
+                  alt="Profile pic"
+                  className="navbar__right__pic"
+                />
+              ) : (
+                <img
+                  src={defaultUserPic}
+                  alt="Profile pic"
+                  className="navbar__right__pic"
+                />
+              )}
+            </Link>
+          ) : (
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
+              className="navbar__right__btn"
+            >
+              Get started
+            </button>
+          )}
         </div>
       </header>
     </>

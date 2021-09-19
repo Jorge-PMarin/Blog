@@ -1,9 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../context/userContext';
-
-const axios = require('axios');
-
-const API = process.env.BASE_URL;
+import { axiosInstance } from '../config';
 
 export default function WritePost() {
   const { user } = useContext(UserContext);
@@ -17,9 +14,9 @@ export default function WritePost() {
     let post;
 
     try {
-      const resText = await axios({
+      const resText = await axiosInstance({
         method: 'post',
-        url: `${API}/posts`,
+        url: `/posts`,
         headers: {
           Authorization: user.user.token,
         },
@@ -38,9 +35,9 @@ export default function WritePost() {
     formData.append('picture', file);
     formData.append('id', post._id);
     try {
-      await axios({
+      await axiosInstance({
         method: 'post',
-        url: `${API}/posts/picture`,
+        url: `/posts/picture`,
         headers: {
           Authorization: user.user.token,
         },

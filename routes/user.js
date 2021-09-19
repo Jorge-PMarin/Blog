@@ -24,7 +24,6 @@ router.post('/', async (req, res) => {
     delete userObject.tokens;
     res.send({ ...userObject, token });
   } catch (err) {
-    console.log(err.message);
     res.sendStatus(500);
   }
 });
@@ -36,7 +35,6 @@ router.post('/login', async (req, res) => {
       req.body.email,
       req.body.password
     );
-    console.log(user.avatar.buffer);
     const token = await user.generateToken();
     const userObject = user.toObject();
     delete userObject.password;
@@ -49,7 +47,6 @@ router.post('/login', async (req, res) => {
 
 //logout user
 router.post('/logout', auth, async (req, res) => {
-  //    console.log('working')
   try {
     req.user.tokens = req.user.tokens.filter(
       (token) => token.token !== req.token

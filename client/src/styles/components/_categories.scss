@@ -1,18 +1,17 @@
 .container {
-    border-bottom: .1rem solid gray;
+  border-bottom: 0.1rem solid gray;
 }
 
 .container__heading {
-    font-weight: bold;
-    font-size: 1.7rem;
-    padding: 1.5rem;
+  font-weight: bold;
+  font-size: 1.7rem;
+  padding: 1.5rem;
 }
 
 .container__others:link,
-.container__others:visited
-{
-    padding: 1rem 0;
-    display: inline-block;
-    text-decoration: none;
-    color: rgb(14, 88, 14);
+.container__others:visited {
+  padding: 1rem 0;
+  display: inline-block;
+  text-decoration: none;
+  color: rgb(14, 88, 14);
 }

@@ -2,10 +2,7 @@ import React, { useState, useContext } from 'react';
 import defaultUserPic from '../images/user.png';
 import { UserContext } from '../context/userContext';
 import { Logout, Update } from '../context/userActions';
-
-const axios = require('axios');
-
-const API = process.env.BASE_URL;
+import { axiosInstance } from '../config';
 
 export default function Settings() {
   const { user, dispatchUser } = useContext(UserContext);
@@ -26,9 +23,9 @@ export default function Settings() {
       if (password !== passConfirm) {
         throw new Error('Passwords do not match');
       }
-      const textRes = await axios({
+      const textRes = await axiosInstance({
         method: 'patch',
-        url: `${API}/users`,
+        url: `/users`,
         headers: {
           Authorization: user.user.token,
         },
@@ -44,14 +41,13 @@ export default function Settings() {
     }
 
     // submit picture
-    console.log('yes');
     if (!file) return;
     const formData = new FormData();
     formData.append('avatar', file);
     try {
-      const picRes = await axios({
+      const picRes = await axiosInstance({
         method: 'post',
-        url: `${API}/users/avatar`,
+        url: `/users/avatar`,
         headers: {
           Authorization: user.user.token,
         },
@@ -67,9 +63,9 @@ export default function Settings() {
     const confirm = window.confirm('Are you sure?');
     if (!confirm) return;
     try {
-      await axios({
+      await axiosInstance({
         method: 'delete',
-        url: `${API}/users`,
+        url: `/users`,
         headers: {
           Authorization: user.user.token,
         },
@@ -93,9 +89,16 @@ export default function Settings() {
     <div className="settings">
       <div className="settings__top">
         <h1 className="settings__top__title">Update your account</h1>
-        <span className="settings__top__deleteOption" onClick={handleDelete}>Delete account</span>
+        <span className="settings__top__deleteOption" onClick={handleDelete}>
+          Delete account
+        </span>
       </div>
-      <form method="post" className="settings__form" encType="multipart/form-data" onSubmit={handleSubmit}>
+      <form
+        method="post"
+        className="settings__form"
+        encType="multipart/form-data"
+        onSubmit={handleSubmit}
+      >
         <div className="settings__form__picWrapper">
           {user.user.avatar ? (
             <img
@@ -153,7 +156,9 @@ export default function Settings() {
           className="settings__form__input"
           onChange={(e) => setPassConfirm(e.target.value)}
         />
-        <button type="submit" className="settings__form__btn">Update</button>
+        <button type="submit" className="settings__form__btn">
+          Update
+        </button>
         {error && <small>{error}</small>}
         {success && <small>{success}</small>}
       </form>

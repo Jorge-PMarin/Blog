@@ -1,74 +1,73 @@
 .loginModal {
-    position: fixed;
-    top:0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.671);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.671);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
 }
 
 .loginModal__content {
-    position: relative;
-    background-color: #fff;
-    width: 40rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1.5rem;
+  position: relative;
+  background-color: #fff;
+  width: 40rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1.5rem;
 }
 
 .loginModal__content__close {
-    position: absolute;
-    top:.8rem;
-    right: 1.2rem;
-    color: #aaa;
-    font-weight: bold;
-    font-size: 2.5rem;
-    cursor: pointer;
+  position: absolute;
+  top: 0.8rem;
+  right: 1.2rem;
+  color: #aaa;
+  font-weight: bold;
+  font-size: 2.5rem;
+  cursor: pointer;
 }
 
 .loginModal__content__form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-bottom: .1rem solid rgb(211, 211, 211);
-    padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 0.1rem solid rgb(211, 211, 211);
+  padding: 2rem;
 }
 
 .loginModal__content__form__input,
 .loginModal__content__form__btn,
-.loginModal__content__registerBtn
-{
-    font-size: 1.7rem;
-    padding: 1.2rem;
-    border-radius: .5rem;
+.loginModal__content__registerBtn {
+  font-size: 1.7rem;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
 }
 
 .loginModal__content__form__input {
-    margin-bottom: 1rem;
-    border: .1rem solid rgb(211, 211, 211);
+  margin-bottom: 1rem;
+  border: 0.1rem solid rgb(211, 211, 211);
 }
 
 .loginModal__content__form__btn {
-    background-color: teal;
-    color: #fff;
-    font-weight: bold;
-    border: none;
+  background-color: teal;
+  color: #fff;
+  font-weight: bold;
+  border: none;
 }
 
 .loginModal__content__form__btn:hover {
-    background-color: lighten(teal, 10%);
+  background-color: lighten(teal, 10%);
 }
 
 .loginModal__content__registerBtn {
-    background-color: salmon;
-    color: #fff;
-    border: none;
-    margin-top: 2rem;
-    cursor: pointer;
+  background-color: salmon;
+  color: #fff;
+  border: none;
+  margin-top: 2rem;
+  cursor: pointer;
 }
