@@ -19,6 +19,9 @@ const postSchema = new mongoose.Schema(
     authorName: {
       type: String,
     },
+    categories: {
+      type: Array,
+    },
     picture: {
       type: Buffer,
     },

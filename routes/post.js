@@ -25,11 +25,19 @@ router.post('/', auth, async (req, res) => {
 
 //get all posts
 router.get('/', async (req, res) => {
+  const user = req.query.user;
+  const category = req.query.category;
   try {
     let posts = [];
     let posts_objs = [];
-    if (req.query.user) {
-      posts = await Post.find({ authorName: req.query.user });
+    if (user) {
+      posts = await Post.find({ authorName: user });
+    } else if (category) {
+      posts = await Post.find({
+        categories: {
+          $in: [category],
+        },
+      });
     } else {
       posts = await Post.find();
     }

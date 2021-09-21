@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const Post = require('./models/post');
 const postRouter = require('./routes/post');
 const userRouter = require('./routes/user');
+const categoryRouter = require('./routes/category')
 const cors = require('cors');
 
 const app = express();
@@ -18,6 +19,7 @@ app.use(
 
 app.use('/posts', postRouter);
 app.use('/users', userRouter);
+app.use('/categories', categoryRouter)
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '/client/build')));

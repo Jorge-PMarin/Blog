@@ -1,19 +1,14 @@
 import React from 'react';
 import Category from './Category';
 
-export default function Categories() {
+export default function Categories({ categories }) {
   return (
     <div className="container">
       <p className="container__heading">Discover more of what matters to you</p>
       <div className="container__categories">
-        <Category />
-        <Category />
-        <Category />
-        <Category />
-        <Category />
-        <Category />
-        <Category />
-        <Category />
+        {categories.map((category) => (
+          <Category key={category._id} categoryName={category.name} />
+        ))}
       </div>
       <span className="container__others">See all topics</span>
     </div>
