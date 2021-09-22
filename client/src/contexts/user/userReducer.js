@@ -26,8 +26,7 @@ export default function userReducer(state, action) {
         ...state,
         user: action.payload,
       };
-    default: {
+    default:
       return state;
-    }
   }
 }

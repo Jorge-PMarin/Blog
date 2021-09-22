@@ -1,6 +1,6 @@
 import React, { useRef, useState, useContext } from 'react';
-import { UserContext } from '../context/userContext';
-import { LoginSuccess } from '../context/userActions';
+import { UserContext } from '../contexts/user/userContext';
+import { LoginSuccess } from '../contexts/user/userActions';
 import { axiosInstance } from '../config';
 
 export default function Register() {

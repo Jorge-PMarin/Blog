@@ -9,7 +9,7 @@ import PostPage from './pages/PostPage';
 import WritePage from './pages/WritePage';
 import SettingsPage from './pages/SettingsPage';
 import RegisterPage from './pages/RegisterPage';
-import { UserContext } from './context/userContext';
+import { UserContext } from './contexts/user/userContext';
 
 function App() {
   const { user } = useContext(UserContext);

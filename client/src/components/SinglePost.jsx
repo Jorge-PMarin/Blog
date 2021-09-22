@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import defaultUserPic from '../images/user.png';
-import { UserContext } from '../context/userContext';
+import { UserContext } from '../contexts/user/userContext';
 import { axiosInstance } from '../config';
 
 export default function SinglePost() {

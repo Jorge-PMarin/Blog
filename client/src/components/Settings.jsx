@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import defaultUserPic from '../images/user.png';
-import { UserContext } from '../context/userContext';
-import { Logout, Update } from '../context/userActions';
+import { UserContext } from '../contexts/user/userContext';
+import { Logout, Update } from '../contexts/user/userActions';
 import { axiosInstance } from '../config';
 
 export default function Settings() {

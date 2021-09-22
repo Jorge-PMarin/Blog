@@ -1,7 +1,7 @@
 import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { UserContext } from '../context/userContext';
-import { LoginStart, LoginSuccess, LoginFailure } from '../context/userActions';
+import { UserContext } from '../contexts/user/userContext';
+import { LoginStart, LoginSuccess, LoginFailure } from '../contexts/user/userActions';
 import { axiosInstance } from '../config';
 
 export default function LoginModal({ isOpen, setIsOpen }) {

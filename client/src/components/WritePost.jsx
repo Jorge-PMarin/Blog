@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { UserContext } from '../context/userContext';
+import { UserContext } from '../contexts/user/userContext';
 import { axiosInstance } from '../config';
 
 export default function WritePost() {

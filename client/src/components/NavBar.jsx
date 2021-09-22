@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo-green-1x.png';
 import defaultUserPic from '../images/user.png';
 import LoginModal from './LoginModal';
-import { UserContext } from '../context/userContext';
-import { Logout } from '../context/userActions';
+import { UserContext } from '../contexts/user/userContext';
+import { Logout } from '../contexts/user/userActions';
 import { axiosInstance } from '../config';
 
 export default function NavBar() {
