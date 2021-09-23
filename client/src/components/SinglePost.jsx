@@ -3,6 +3,7 @@ import { useLocation, Link } from 'react-router-dom';
 import defaultUserPic from '../images/user.png';
 import { UserContext } from '../contexts/user/userContext';
 import { axiosInstance } from '../config';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export default function SinglePost() {
   const [post, setPost] = useState({});
@@ -25,7 +26,6 @@ export default function SinglePost() {
         setTitle(res.data.title);
         setBody(res.data.body);
         setPostPic(res.data.picture);
-        console.log(res.data.authorId);
       } catch (err) {
         console.log(err);
       }
@@ -74,6 +74,7 @@ export default function SinglePost() {
           value={title}
           className="singlePost__titleInput"
           onChange={(e) => setTitle(e.target.value)}
+          autoFocus
         />
       ) : (
         <h1 className="singlePost__title">{title}</h1>
@@ -134,7 +135,7 @@ export default function SinglePost() {
         />
         {updateMode ? (
           <>
-            <textarea
+            <TextareaAutosize
               className="singlePost__content__textarea"
               value={body}
               onChange={(e) => setBody(e.target.value)}

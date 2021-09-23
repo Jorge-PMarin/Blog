@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { UserContext } from '../contexts/user/userContext';
 import { axiosInstance } from '../config';
+import TextareaAutosize from 'react-textarea-autosize';
 
 export default function WritePost() {
   const { user } = useContext(UserContext);
@@ -10,7 +11,10 @@ export default function WritePost() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    if (!file) return alert('Choose a picture for your post by clicking on the plus icon');
+    if (!file)
+      return alert(
+        'Choose a picture for your post by clicking on the plus icon'
+      );
     let post;
 
     try {
@@ -52,12 +56,12 @@ export default function WritePost() {
   return (
     <div className="writePost">
       {file && (
-      <img
-        src={URL.createObjectURL(file)}
-        alt="post"
-        className="writePost__img"
-        id="post_pic"
-      />
+        <img
+          src={URL.createObjectURL(file)}
+          alt="post"
+          className="writePost__img"
+          id="post_pic"
+        />
       )}
 
       <form className="writePost__form" onSubmit={handleSubmit}>
@@ -79,13 +83,15 @@ export default function WritePost() {
           />
         </div>
         <div className="writePost__form__group">
-          <textarea
-            placeholder="Tell your story..."
-            className="writePost__form__group__bodyInput"
-            onChange={(e) => setBody(e.target.value)}
+          <TextareaAutosize
+           placeholder="Tell your story..."
+           className="writePost__form__group__bodyInput"
+           onChange={(e) => setBody(e.target.value)}
           />
         </div>
-        <button type="submit" className="writePost__form__btn">Publish</button>
+        <button type="submit" className="writePost__form__btn">
+          Publish
+        </button>
       </form>
     </div>
   );

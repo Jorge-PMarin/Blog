@@ -7,8 +7,7 @@
   margin-bottom: 2rem;
 }
 
-.singlePost__titleInput,
-.singlePost__content__textarea {
+.singlePost__titleInput {
   padding: 1rem;
   border: none;
 
@@ -18,16 +17,10 @@
 }
 
 .singlePost__titleInput {
+  width: 100%;
   font-size: 5rem;
   text-align: center;
   border-bottom: 1px solid gray;
-}
-
-.singlePost__content__textarea {
-  height: 40vh;
-  font-size: 2rem;
-  resize: none;
-  width: 100%;
 }
 
 .singlePost__info__author {
@@ -93,16 +86,42 @@
   color: tomato;
 }
 
+.singlePost__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .singlePost__content__img {
   width: 100%;
   height: auto;
   margin-top: 2rem;
 }
 
-.singlePost__content__text {
+.singlePost__content__text,
+.singlePost__content__textarea {
   margin-top: 4rem;
-  font-size: 2.2rem;
-  line-height: 3rem;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+}
+
+.singlePost__content__text {
+  width: 100%;
+}
+
+.singlePost__content__textarea {
+  font-family: inherit;
+  min-height: 20rem;
+  background-color: $light-gray;
+  resize: none;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .singlePost__content__text::first-letter {
@@ -119,5 +138,9 @@
   border-radius: 1rem;
   margin: 2rem 0;
   cursor: pointer;
-  align-self: center;
+  text-align: center;
+}
+
+.singlePost__content__img {
+  border-radius: 0.5rem;
 }

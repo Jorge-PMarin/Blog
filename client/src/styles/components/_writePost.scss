@@ -5,8 +5,7 @@
 }
 
 .writePost__img {
-  width: 70vw;
-  height: 40vh;
+  width: 70%;
   object-fit: cover;
   border-radius: 0.8rem;
   margin-top: 4rem;
@@ -25,7 +24,7 @@
 
 .writePost__form__group__icon {
   font-size: 2.5rem;
-  border: 0.1rem solid black;
+  border: 0.1rem solid $dark-gray;
   border-radius: 2rem;
   padding: 0.2rem;
   margin-right: 0.5rem;
@@ -52,8 +51,13 @@
 }
 
 .writePost__form__group__bodyInput {
-  height: 70vh;
+  color: $gray;
+  font-family: inherit;
   font-size: 2rem;
+  min-height: 20rem;
+  background-color: $light-gray;
+  resize: none;
+  border-radius: 0.5rem;
 }
 
 .writePost__form__btn {
