@@ -52,7 +52,7 @@ export default function LoginModal({ isOpen, setIsOpen }) {
             Log In
           </button>
         </form>
-        {user.error && <span>Something went wrong.</span>}
+        {user.error && <small className="loginModal__content__error">Something went wrong. Please try again.</small>}
         <div className="loginModel__content__btnWrapper" />
         <Link to="/register">
           <button type="button" className="loginModal__content__registerBtn">

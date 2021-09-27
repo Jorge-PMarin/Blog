@@ -58,16 +58,30 @@
   color: #fff;
   font-weight: bold;
   border: none;
-}
+  font-family: inherit;
+  font-size: 1.8rem;
 
-.loginModal__content__form__btn:hover {
-  background-color: lighten(teal, 10%);
+  &:hover {
+    background-color: lighten(teal, 10%);
+  }
 }
 
 .loginModal__content__registerBtn {
   background-color: salmon;
+  font-weight: bold;
+  font-family: inherit;
+  font-size: 1.8rem;
   color: #fff;
   border: none;
   margin-top: 2rem;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten(salmon, 5%);
+  }
+}
+
+.loginModal__content__error {
+  color: red;
+  font-size: 1.5rem;
 }

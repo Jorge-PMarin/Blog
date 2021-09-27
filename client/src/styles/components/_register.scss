@@ -14,8 +14,7 @@
 }
 
 .register__header {
-  font-size: 4rem;
-  padding-bottom: 2rem;
+  font-size: 5rem;
 }
 
 .register__form {
@@ -67,11 +66,16 @@
   border-radius: 0.5rem;
   border: none;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 1.8rem;
+  font-weight: bold;
   padding: 1rem;
   background-color: teal;
   color: white;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten(teal, 10%);
+  }
 }
 
 .register__form__input.error {

@@ -77,6 +77,10 @@
   color: #fff;
   align-self: center;
   cursor: pointer;
+
+  &:hover {
+    background-color: lighten(teal, 10%);
+  }
 }
 
 @media (max-width: 600px) {

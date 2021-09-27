@@ -139,6 +139,10 @@
   margin: 2rem 0;
   cursor: pointer;
   text-align: center;
+
+  &:hover {
+    background-color: lighten(teal, 10%);
+  }
 }
 
 .singlePost__content__img {
