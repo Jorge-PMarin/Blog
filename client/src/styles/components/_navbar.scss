@@ -29,6 +29,11 @@
 
 .navbar__middle > li {
   cursor: pointer;
+  list-style-type: none;
+
+  &:hover {
+    color: rgb(151, 148, 148);
+  }
 }
 
 .navbar__right {
@@ -40,10 +45,16 @@
   background-color: green;
   color: #fff;
   border: none;
-  padding: 1rem;
-  border-radius: 1.8rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1.9rem;
   font-size: 1.6rem;
   cursor: pointer;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.247);
+
+  &:hover {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
 }
 
 .navbar__right__pic {
@@ -51,4 +62,8 @@
   height: 5rem;
   border-radius: 4rem;
   object-fit: cover;
+
+  &:hover {
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.425)
+  }
 }

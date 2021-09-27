@@ -11,9 +11,6 @@ export default function Header() {
           It is easy and free to post your thinking on any topic and connect
           with millions of readers.
         </h2>
-        <button type="submit" className="header__content__btn">
-          Start Writing
-        </button>
       </div>
     </header>
   );

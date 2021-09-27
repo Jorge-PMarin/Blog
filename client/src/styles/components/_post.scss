@@ -35,7 +35,7 @@
 
 .post__info__date {
   margin-top: 1rem;
-  color: $light-gray;
+  color: gray;
 }
 
 .post__container {
@@ -52,4 +52,26 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .post {
+    margin-bottom: 2rem;
+    height: 12rem;
+  }
+
+  .post__info__author {
+    color: $gray;
+  }
+
+  .post__info__title {
+    font-size: 2rem;
+    line-height: 2.9rem;
+    line-clamp: 2;
+    overflow-y: hidden;
+  }
+
+  .post__info__desc {
+    display: none;
+  }
 }

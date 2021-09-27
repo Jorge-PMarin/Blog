@@ -6,12 +6,17 @@
   font-weight: bold;
   font-size: 1.7rem;
   padding: 1.5rem;
+  color: $gray;
 }
 
-.container__others:link,
-.container__others:visited {
+.container__others {
   padding: 1rem 0;
   display: inline-block;
   text-decoration: none;
-  color: rgb(14, 88, 14);
+  color: gray;
+  cursor: pointer;
+
+  &:hover {
+    color: green;
+  }
 }

@@ -1,6 +1,9 @@
 .sidebar {
   flex: 1;
-  padding: 1rem 0;
   text-align: center;
   padding: 0 4rem;
+
+  @media (max-width: 748px) {
+    display: none;
+  }
 }

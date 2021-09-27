@@ -20,6 +20,10 @@
 .settings__top__deleteOption {
   color: rgb(104, 103, 103);
   cursor: pointer;
+
+  &:hover {
+    color: $gray;
+  }
 }
 
 .settings__form {
@@ -73,4 +77,11 @@
   color: #fff;
   align-self: center;
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .settings__top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }

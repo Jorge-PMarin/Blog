@@ -144,3 +144,10 @@
 .singlePost__content__img {
   border-radius: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  .singlePost__title {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+}
