@@ -6,6 +6,7 @@ import LoginModal from './LoginModal';
 import { UserContext } from '../contexts/user/userContext';
 import { Logout } from '../contexts/user/userActions';
 import { axiosInstance } from '../config';
+import MobileMenu from './MobileMenu';
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,9 +32,11 @@ export default function NavBar() {
     <>
       <LoginModal isOpen={isOpen} setIsOpen={setIsOpen} />
       <header className="navbar">
+
         <div className="navbar__left">
           <img src={logo} alt="logo" className="navbar__left__logo" />
         </div>
+
         <ul className="navbar__middle">
           <li>
             <Link to="/" className="link">
@@ -56,6 +59,7 @@ export default function NavBar() {
             <li onClick={() => setIsOpen(true)}>Sign In</li>
           )}
         </ul>
+
         <div className="navbar__right">
           {user.user ? (
             <Link to="/settings">
@@ -83,6 +87,9 @@ export default function NavBar() {
             </Link>
           )}
         </div>
+
+        <MobileMenu />
+
       </header>
     </>
   );

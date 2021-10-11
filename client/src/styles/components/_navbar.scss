@@ -67,3 +67,13 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.425);
   }
 }
+
+@media (max-width: 600px) {
+  .navbar__right {
+    display: none;
+  }
+
+  .navbar__middle {
+    display: none;
+  }
+}

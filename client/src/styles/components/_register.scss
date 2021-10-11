@@ -1,5 +1,4 @@
 .register {
-  height: calc(100vh - 7rem);
   background-image: linear-gradient(
       rgba(255, 255, 255, 0.3),
       rgba(255, 255, 255, 0.3)
@@ -11,6 +10,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.6rem;
+  padding-bottom: 2rem;
 }
 
 .register__header {
