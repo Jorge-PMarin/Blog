@@ -12,7 +12,7 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   const { user, dispatchUser } = useContext(UserContext);
 
-  async function logout() {
+  async function handleLogout() {
     try {
       await axiosInstance({
         method: 'post',
@@ -54,7 +54,7 @@ export default function NavBar() {
             </Link>
           </li>
           {user.user ? (
-            <li onClick={logout}>Logout</li>
+            <li onClick={handleLogout}>Logout</li>
           ) : (
             <li onClick={() => setIsOpen(true)}>Sign In</li>
           )}
