@@ -34,7 +34,7 @@ export default function NavBar() {
       <header className="navbar">
 
         <div className="navbar__left">
-          <img src={logo} alt="logo" className="navbar__left__logo" />
+          <img src={logo} alt="logo" className="navbar__logo" />
         </div>
 
         <ul className="navbar__middle">
@@ -69,19 +69,19 @@ export default function NavBar() {
                     'base64'
                   )}`}
                   alt="Profile pic"
-                  className="navbar__right__pic"
+                  className="navbar__avatar"
                 />
               ) : (
                 <img
                   src={defaultUserPic}
                   alt="Profile pic"
-                  className="navbar__right__pic"
+                  className="navbar__avatar"
                 />
               )}
             </Link>
           ) : (
             <Link to="/register">
-              <button type="button" className="navbar__right__btn">
+              <button type="button" className="navbar__btn">
                 Get started
               </button>
             </Link>

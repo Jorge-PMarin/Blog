@@ -16,27 +16,27 @@
 }
 
 @media (max-width: 600px) {
-  .header__content__title {
+  .header__title {
     font-size: 5.5rem;
   }
 
-  .header__content__para {
+  .header__para {
     font-size: 1.8rem;
   }
 }
 
 @media (min-width: 600px) {
-  .header__content__title {
+  .header__title {
     font-size: 6rem;
   }
 
-  .header__content__para {
+  .header__para {
     font-size: 2.2rem;
   }
 }
 
 @media (min-width: 768px) {
-  .header__content__title {
+  .header__title {
     font-size: 6.5rem;
   }
 }

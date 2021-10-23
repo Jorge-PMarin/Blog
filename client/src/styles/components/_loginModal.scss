@@ -22,7 +22,7 @@
   padding: 2rem 1.5rem;
 }
 
-.loginModal__content__close {
+.loginModal__close {
   position: absolute;
   top: 0.8rem;
   right: 1.2rem;
@@ -32,7 +32,7 @@
   cursor: pointer;
 }
 
-.loginModal__content__form {
+.loginModal__form {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -40,20 +40,20 @@
   padding: 2rem;
 }
 
-.loginModal__content__form__input,
-.loginModal__content__form__btn,
-.loginModal__content__registerBtn {
+.loginModal__input,
+.loginModal__btn,
+.loginModal__register {
   font-size: 1.7rem;
   padding: 1.2rem;
   border-radius: 0.5rem;
 }
 
-.loginModal__content__form__input {
+.loginModal__input {
   margin-bottom: 1rem;
   border: 0.1rem solid rgb(211, 211, 211);
 }
 
-.loginModal__content__form__btn {
+.loginModal__btn {
   background-color: teal;
   color: #fff;
   font-weight: bold;
@@ -66,7 +66,7 @@
   }
 }
 
-.loginModal__content__registerBtn {
+.loginModal__register {
   background-color: salmon;
   font-weight: bold;
   font-family: inherit;
@@ -81,7 +81,7 @@
   }
 }
 
-.loginModal__content__error {
+.loginModal__error {
   color: red;
   font-size: 1.5rem;
 }
