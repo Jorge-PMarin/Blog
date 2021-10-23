@@ -81,47 +81,47 @@ export default function SinglePost() {
       )}
       {!updateMode && (
         <section className="singlePost__info">
-          <div className="singlePost__info__author">
+          <div className="singlePost__author">
             {post.authorId?.avatar ? (
-              <div className="singlePost__info__author__container">
+              <div className="singlePost__wrapper">
                 <img
                   src={`data:image/*;base64,${post.authorId?.avatar}`}
                   alt="Author"
-                  className="singlePost__info__author__container__pic"
+                  className="singlePost__avatar"
                 />
               </div>
             ) : (
-              <div className="singlePost__info__author__container">
+              <div className="singlePost__wrapper">
                 <img
                   src={defaultUserPic}
                   alt="Author"
-                  className="singlePost__info__author__container__pic"
+                  className="singlePost__avatar"
                 />
               </div>
             )}
-            <div className="div singlePost__info__author__about">
+            <div className="div singlePost__about">
               <Link to={`/?user=${post.authorId?.name}`} className="link">
-                <p className="singlePost__info__author__about__name">
+                <p className="singlePost__author-name">
                   {post.authorId?.name}
                 </p>
               </Link>
               <button
                 type="button"
-                className="singlePost__info__author__about__followBtn"
+                className="singlePost__follow-btn"
               >
                 Follow
               </button>
             </div>
           </div>
           {post.authorId?.name === user.user?.name && (
-            <div className="singlePost__info__edit">
+            <div className="singlePost__options">
               <i
                 onClick={() => setUpdateMode(true)}
-                className="fas fa-edit singlePost__info__edit__updateIcon"
+                className="fas fa-edit singlePost__update-icon"
               />
               <i
                 onClick={handleDelete}
-                className="fas fa-trash singlePost__info__edit__thrashIcon"
+                className="fas fa-trash singlePost__delete-icon"
               />
             </div>
           )}
@@ -131,25 +131,25 @@ export default function SinglePost() {
         <img
           src={`data:image/*;base64,${postPic}`}
           alt="post"
-          className="singlePost__content__img"
+          className="singlePost__post-img"
         />
         {updateMode ? (
           <>
             <TextareaAutosize
-              className="singlePost__content__textarea"
+              className="singlePost__textarea"
               value={body}
               onChange={(e) => setBody(e.target.value)}
             />
             <button
               type="button"
-              className="singlePost__content__updateBtn"
+              className="singlePost__update-btn"
               onClick={handleUpdate}
             >
               Update
             </button>
           </>
         ) : (
-          <p className="singlePost__content__text">{body}</p>
+          <p className="singlePost__text">{body}</p>
         )}
       </section>
     </article>

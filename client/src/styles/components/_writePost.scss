@@ -18,25 +18,25 @@
   align-items: center;
 }
 
-.writePost__form__group {
+.writePost__form-group {
   margin-top: 3rem;
 }
 
-.writePost__form__group__icon {
+.writePost__plus-icon {
   font-size: 2.5rem;
   border: 0.1rem solid $dark-gray;
-  border-radius: 2rem;
-  padding: 0.2rem;
+  border-radius: 50%;
+  padding: 0.3rem;
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.writePost__form__group__fileInput {
+.writePost__file-input {
   display: none;
 }
 
-.writePost__form__group__titleInput,
-.writePost__form__group__bodyInput {
+.writePost__title-input,
+.writePost__textarea {
   padding: 1rem;
   width: 70vw;
   border: none;
@@ -46,11 +46,11 @@
   }
 }
 
-.writePost__form__group__titleInput {
+.writePost__title-input {
   font-size: 3rem;
 }
 
-.writePost__form__group__bodyInput {
+.writePost__textarea {
   color: $gray;
   font-family: inherit;
   font-size: 2rem;
@@ -60,7 +60,7 @@
   border-radius: 0.5rem;
 }
 
-.writePost__form__btn {
+.writePost__btn {
   background-color: teal;
   color: #fff;
   border: none;

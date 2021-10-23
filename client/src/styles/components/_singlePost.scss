@@ -23,17 +23,17 @@
   border-bottom: 1px solid gray;
 }
 
-.singlePost__info__author {
+.singlePost__author {
   display: flex;
   align-items: center;
 }
 
-.singlePost__info__author__container {
+.singlePost__wrapper {
   width: 5.5rem;
   height: 5.5rem;
 }
 
-.singlePost__info__author__container__pic {
+.singlePost__avatar {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -41,20 +41,20 @@
   cursor: pointer;
 }
 
-.singlePost__info__author__about {
+.singlePost__about {
   text-align: center;
 }
 
-.singlePost__info__author__about__name {
+.singlePost__author-name {
   margin: 0 0 0.2rem 0.2rem;
   cursor: pointer;
 }
 
-.singlePost__info__author__about__name:hover {
+.singlePost__author-name:hover {
   text-decoration: underline;
 }
 
-.singlePost__info__author__about__followBtn {
+.singlePost__follow-btn {
   background-color: rgb(164, 164, 179);
   color: #fff;
   padding: 0.2rem 1rem;
@@ -63,26 +63,26 @@
   cursor: pointer;
 }
 
-.singlePost__info__author__about__followBtn:hover {
+.singlePost__follow-btn:hover {
   background-color: rgb(121, 121, 133);
 }
 
-.singlePost__info__edit {
+.singlePost__options {
   text-align: right;
 }
 
-.singlePost__info__edit__updateIcon,
-.singlePost__info__edit__thrashIcon {
+.singlePost__update-icon,
+.singlePost__delete-icon {
   font-size: 2.2rem;
   cursor: pointer;
 }
 
-.singlePost__info__edit__updateIcon {
+.singlePost__update-icon {
   margin-right: 1rem;
   color: teal;
 }
 
-.singlePost__info__edit__thrashIcon {
+.singlePost__delete-icon {
   color: tomato;
 }
 
@@ -92,24 +92,24 @@
   align-items: center;
 }
 
-.singlePost__content__img {
+.singlePost__post-img {
   width: 100%;
   height: auto;
   margin-top: 2rem;
 }
 
-.singlePost__content__text,
-.singlePost__content__textarea {
+.singlePost__text,
+.singlePost__textarea {
   margin-top: 4rem;
   font-size: 1.8rem;
   line-height: 2.5rem;
 }
 
-.singlePost__content__text {
+.singlePost__text {
   width: 100%;
 }
 
-.singlePost__content__textarea {
+.singlePost__textarea {
   font-family: inherit;
   min-height: 20rem;
   background-color: $light-gray;
@@ -124,13 +124,13 @@
   }
 }
 
-.singlePost__content__text::first-letter {
+.singlePost__text::first-letter {
   font-size: 3.5rem;
   font-weight: bold;
   margin-left: 2rem;
 }
 
-.singlePost__content__updateBtn {
+.singlePost__update-btn {
   background-color: teal;
   color: #fff;
   border: none;
@@ -145,7 +145,7 @@
   }
 }
 
-.singlePost__content__img {
+.singlePost__post-img {
   border-radius: 0.5rem;
 }
 

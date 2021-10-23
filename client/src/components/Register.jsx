@@ -26,14 +26,14 @@ export default function Register() {
       const formDiv = input.parentElement;
       const small = formDiv.querySelector('small');
 
-      formDiv.className = 'register__form__input error';
+      formDiv.className = 'register__input error';
       small.innerText = message;
     }
 
     // Set success
     function setSuccess(input) {
       const formDiv = input.parentElement;
-      formDiv.className = 'register__form__input success';
+      formDiv.className = 'register__input success';
     }
 
     function isEmail(value) {
@@ -52,7 +52,7 @@ export default function Register() {
         'Name must be at least 3 characters long'
       );
     }
-    name.current.parentElement.className = 'register__form__input success';
+    name.current.parentElement.className = 'register__input success';
 
     // check email
     if (!isEmail(emailValue)) {
@@ -98,7 +98,7 @@ export default function Register() {
           <input
             type="text"
             id="name-input"
-            className="register__form__input error"
+            className="register__input error"
             placeholder="Your name"
             ref={name}
           />
@@ -111,7 +111,7 @@ export default function Register() {
           <input
             type="text"
             id="email-input"
-            className="register__form__input"
+            className="register__input"
             placeholder="Your email"
             ref={email}
           />
@@ -124,7 +124,7 @@ export default function Register() {
           <input
             type="password"
             id="pass-input"
-            className="register__form__input"
+            className="register__input"
             placeholder="Your password"
             ref={pass}
           />
@@ -137,7 +137,7 @@ export default function Register() {
           <input
             type="password"
             id="confirm-input"
-            className="register__form__input"
+            className="register__input"
             placeholder="Your password"
             ref={confirmPass}
           />
@@ -145,7 +145,7 @@ export default function Register() {
           <i className="fas fa-check-circle" />
           <small>Error message</small>
         </div>
-        <button type="submit" className="register__form__btn">
+        <button type="submit" className="register__btn">
           Sign up
         </button>
       </form>

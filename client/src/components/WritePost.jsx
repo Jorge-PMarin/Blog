@@ -65,31 +65,31 @@ export default function WritePost() {
       )}
 
       <form className="writePost__form" onSubmit={handleSubmit}>
-        <div className="writePost__form__group">
+        <div className="writePost__form-group">
           <label htmlFor="file-input" required>
-            <i className="fas fa-plus writePost__form__group__icon" />
+            <i className="fas fa-plus writePost__plus-icon" />
           </label>
           <input
             type="file"
-            className="writePost__form__group__fileInput"
+            className="writePost__file-input"
             id="file-input"
             onChange={(e) => setFile(e.target.files[0])}
           />
           <input
             type="text"
-            className="writePost__form__group__titleInput"
+            className="writePost__title-input"
             placeholder="Title"
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-        <div className="writePost__form__group">
+        <div className="writePost__form-group">
           <TextareaAutosize
            placeholder="Tell your story..."
-           className="writePost__form__group__bodyInput"
+           className="writePost__textarea"
            onChange={(e) => setBody(e.target.value)}
           />
         </div>
-        <button type="submit" className="writePost__form__btn">
+        <button type="submit" className="writePost__btn">
           Publish
         </button>
       </form>

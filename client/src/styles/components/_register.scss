@@ -62,7 +62,7 @@
   }
 }
 
-.register__form__btn {
+.register__btn {
   width: 100%;
   border-radius: 0.5rem;
   border: none;
@@ -79,7 +79,7 @@
   }
 }
 
-.register__form__input.error {
+.register__input.error {
   input {
     border: 1px solid rgb(187, 14, 14);
   }
@@ -95,7 +95,7 @@
   }
 }
 
-.register__form__input.success {
+.register__input.success {
   input {
     border: 0.1rem solid green;
   }

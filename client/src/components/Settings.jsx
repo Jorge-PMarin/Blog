@@ -88,8 +88,8 @@ export default function Settings() {
   return (
     <div className="settings">
       <div className="settings__top">
-        <h1 className="settings__top__title">Update your account</h1>
-        <span className="settings__top__deleteOption" onClick={handleDelete}>
+        <h1 className="Settings__title">Update your account</h1>
+        <span className="Settings__delete" onClick={handleDelete}>
           Delete account
         </span>
       </div>
@@ -99,28 +99,28 @@ export default function Settings() {
         encType="multipart/form-data"
         onSubmit={handleSubmit}
       >
-        <div className="settings__form__picWrapper">
+        <div className="Settings__wrapper">
           {user.user.avatar ? (
             <img
               src={`data:image/*;base64,${user.user.avatar.toString('base64')}`}
               alt="avatar"
-              className="settings__form__picWrapper__pic"
+              className="Settings__avatar"
               id="pic"
             />
           ) : (
             <img
               src={defaultUserPic}
-              className="settings__form__picWrapper__pic"
+              className="Settings__avatar"
               id="pic"
               alt="avatar"
             />
           )}
           <label htmlFor="pic-input">
-            <i className="fas fa-image settings__form__picWrapper__icon" />
+            <i className="fas fa-image Settings__icon" />
           </label>
           <input
             type="file"
-            className="settings__form__picWrapper__fileInput"
+            className="Settings__file-input"
             id="pic-input"
             accept="image/*"
             onChange={handlePicPreview}
@@ -130,7 +130,7 @@ export default function Settings() {
         <input
           type="text"
           id="username-input"
-          className="settings__form__input"
+          className="Settings__text-input"
           placeholder={user.user.name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -138,7 +138,7 @@ export default function Settings() {
         <input
           type="text"
           id="email-input"
-          className="settings__form__input"
+          className="Settings__text-input"
           placeholder={user.user.email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -146,17 +146,17 @@ export default function Settings() {
         <input
           type="password"
           id="password-input"
-          className="settings__form__input"
+          className="Settings__text-input"
           onChange={(e) => setPassword(e.target.value)}
         />
         <label htmlFor="confirm-pass-input">Confirm password</label>
         <input
           type="password"
           id="confirm-pass-input"
-          className="settings__form__input"
+          className="Settings__text-input"
           onChange={(e) => setPassConfirm(e.target.value)}
         />
-        <button type="submit" className="settings__form__btn">
+        <button type="submit" className="Settings__btn">
           Update
         </button>
         {error && <small>{error}</small>}
