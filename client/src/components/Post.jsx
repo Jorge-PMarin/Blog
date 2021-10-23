@@ -8,13 +8,13 @@ export default function Post({ data }) {
     <Link to={`/post/${data._id}`} className="link">
       <div className="post">
         <div className="post__info">
-          <p className="post__info__author">
+          <p className="post__author">
             Author:
             {data.authorName}
           </p>
-          <h4 className="post__info__title">{data.title}</h4>
-          <h5 className="post__info__desc">{data.body}</h5>
-          <p className="post__info__date">
+          <h4 className="post__title">{data.title}</h4>
+          <h5 className="post__desc">{data.body}</h5>
+          <p className="post__date">
             {moment(data.createdAt).format('lll')}
           </p>
         </div>
@@ -22,7 +22,7 @@ export default function Post({ data }) {
           <img
             src={`data:image/*;base64,${data.picture}`}
             alt="post"
-            className="post__container__img"
+            className="post__img"
           />
         </div>
       </div>
